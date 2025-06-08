@@ -12,17 +12,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest # Or 'macos-latest', 'windows-latest'
-    strategy:
-      python-version:  "3.13" # Test against different Python versions
-
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4 # Action to check out your repository code
 
-    - name: Set up Python ${{ python-version }}
+    - name: Set up Python 
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ python-version }}
+        python-version: "3.13"
         cache: 'pip' # Cache pip dependencies for faster builds
 
     - name: Install dependencies
