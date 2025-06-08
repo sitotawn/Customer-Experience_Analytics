@@ -1,0 +1,14 @@
+// .vscode/settings.json
+{
+    "python.pythonPath": "${workspaceFolder}/.venv-Customer-Experience_Analytics/python.exe", // Set the Python interpreter path 
+    // For (Linux/macOS), it might be: "${workspaceFolder}/.venv/bin/python"
+    "python.testing.pytestEnabled": true,                      // Enable pytest as the test framework
+    "python.testing.pytestArgs": [                             // Arguments to pass to pytest
+        "tests"                                                // Tell pytest to look in the 'tests' directory
+    ],
+    "editor.formatOnSave": true,                               // Automatically format code on save
+    "editor.defaultFormatter": "ms-python.python",             // Set default formatter to the Python extension's formatter (Black/Pylance)
+    "files.exclude": {                                         // Exclude certain files/folders from the explorer
+        "**/.ipynb_checkpoints": true                          // Hide Jupyter checkpoints
+    }
+}

@@ -1,0 +1,14 @@
+# for Python files ignore
+*.pyc
+__pycache__/
+.venv/
+venv-Customer-Experience_Analytics/
+*.egg-info
+
+
+# for Data ignore
+data/
+*.csv
+
+# for Jupyter Notebook ignore
+.ipynb_checkpoints/

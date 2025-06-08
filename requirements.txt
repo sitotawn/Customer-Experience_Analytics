@@ -1,0 +1,14 @@
+# requirements.txt
+# Core data manipulation and analysis libraries
+
+numpy
+pandas
+matplotlib
+seaborn
+
+# For web scraping mobile app reviews
+# google-play-scraper is a popular choice for this
+google-play-scraper==1.2.6
+
+# For testing
+pytest==8.2.1
