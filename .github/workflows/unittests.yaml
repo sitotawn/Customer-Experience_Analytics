@@ -13,17 +13,16 @@ jobs:
   build:
     runs-on: ubuntu-latest # Or 'macos-latest', 'windows-latest'
     strategy:
-      matrix:
-        python-version: ["3.9", "3.10", "3.13"] # Test against different Python versions
+      python-version:  "3.13" # Test against different Python versions
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4 # Action to check out your repository code
 
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python ${{ python-version }}
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: ${{ python-version }}
         cache: 'pip' # Cache pip dependencies for faster builds
 
     - name: Install dependencies
