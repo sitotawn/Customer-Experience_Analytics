@@ -5,6 +5,7 @@ numpy
 pandas
 matplotlib
 seaborn
+scikit-learn
 
 # For web scraping mobile app reviews
 # google-play-scraper is a popular choice for this
@@ -12,3 +13,8 @@ google-play-scraper==1.2.6
 
 # For testing
 pytest==8.2.1
+
+#NLP libraries
+transformers==4.52.4
+torch==2.7.1
+spacy
