@@ -1,8 +1,8 @@
 import pandas as pd
 import os
-from src.nlp_analysis.sentiment_analyzer import SentimentAnalyzer
-from src.nlp_analysis.thematic_analyzer import ThematicAnalyzer
-from src.data_processing.preprocess import preprocess_text # For fallback if clean_review_text is missing
+from sentiment_analyzer import SentimentAnalyzer
+from thematic_analyzer import ThematicAnalyzer
+from preprocess import preprocess_text # For fallback if clean_review_text is missing
 
 def run_analysis_pipeline():
     """
@@ -12,7 +12,7 @@ def run_analysis_pipeline():
     print("--- Starting NLP Analysis Pipeline ---")
 
     # Define paths
-    PROCESSED_DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'processed')
+    PROCESSED_DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
     cleaned_csv_path = os.path.join(PROCESSED_DATA_DIR, 'all_cleaned_reviews.csv')
     output_analyzed_csv_path = os.path.join(PROCESSED_DATA_DIR, 'analyzed_reviews_with_themes_sentiment.csv')
 

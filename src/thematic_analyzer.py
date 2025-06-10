@@ -4,6 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import spacy
 from collections import Counter
 import os
+from preprocess import preprocess_text
 
 # Load spaCy model once when the module is imported
 # ENSURE 'en_core_web_sm' is downloaded by running: python -m spacy download en_core_web_sm
@@ -184,7 +185,7 @@ if __name__ == "__main__":
         if 'clean_review_text' not in df_reviews.columns:
             print("Warning: 'clean_review_text' column not found. Running basic text cleaning for demonstration.")
             # Import preprocess_text function from the preprocessor to ensure data is clean
-            from src.preprocess import preprocess_text
+            from preprocess import preprocess_text
             df_reviews['clean_review_text'] = df_reviews['review_text'].apply(preprocess_text)
         else:
             print("'clean_review_text' column found. Proceeding with thematic analysis.")
