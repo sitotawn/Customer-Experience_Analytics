@@ -180,7 +180,7 @@ if __name__ == "__main__":
 
         # Ensure 'clean_review_text' is available.
         # It should be created by src/data_processing/preprocess.py
-        """    
+              
         if 'clean_review_text' not in df_reviews.columns:
             print("Warning: 'clean_review_text' column not found. Running basic text cleaning for demonstration.")
             # Import preprocess_text function from the preprocessor to ensure data is clean
@@ -188,7 +188,7 @@ if __name__ == "__main__":
             df_reviews['clean_review_text'] = df_reviews['review_text'].apply(preprocess_text)
         else:
             print("'clean_review_text' column found. Proceeding with thematic analysis.")
-        """
+          
         analyzer = ThematicAnalyzer()
 
         # --- Step 1: Extract Keywords using TF-IDF ---
